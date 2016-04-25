@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- modify by 45 at 2012-9-19 16:50 -->
+<configuration>
+    <typeAliases>
+    
+		<typeAlias alias="School" type="cn.buaaqingyuan.Entity.School" />
+		<typeAlias alias="Organization" type="cn.buaaqingyuan.Entity.Organization" />
+		
+	</typeAliases>
+	<environments default="development">
+         <environment id="development">
+              <transactionManager type="JDBC" />
+              <!-- 配置数据库连接信息 -->
+              <dataSource type="POOLED">
+                 <property name="driver" value="com.mysql.jdbc.Driver" />
+                 <property name="url" value="jdbc:mysql://localhost:3306/kejsorobot?characterEncoding=utf8" />  
+                 <property name="username" value="root" />
+                 <property name="password" value="1993" />
+             </dataSource>
+         </environment>
+     </environments>
+	<mappers>
+		<mapper resource="cn/buaaqingyuan/SqlMapper/SchoolMapper.xml" />
+		<mapper resource="cn/buaaqingyuan/SqlMapper/OrganizationMapper.xml" />
+		<mapper resource="cn/buaaqingyuan/SqlMapper/EntityMapper.xml" />
+	</mappers>
+</configuration>

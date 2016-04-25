@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SqlMapper.SchoolMapper">
+
+	<resultMap type="School" id="SchoolMap">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="place" column="place" />
+		<result property="type" column="type" />
+		<result property="properties" column="properties" />
+	</resultMap>
+	
+	
+	<select id="getSchoolByName" parameterType="String"  resultMap="SchoolMap">
+	     select  *  from   school where name=#{name}
+	</select>
+
+    
+    <select id="getallSchools"  resultMap="SchoolMap">
+	     select  *  from   school
+	</select>
+    
+</mapper>

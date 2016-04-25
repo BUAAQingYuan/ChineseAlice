@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- Copyright (c) 2007 ALICE A.I. Foundation, Inc. -->
+<!-- Last modified Seo 21, 2009, by Lichunlei -->                                      
+
+<!--人物测试-->
+<category>
+	<pattern>*院士</pattern>
+	<template>
+		<think>
+			<!-- 实体类型，和数据表名、字段名一致-->
+		    <set name="type">people</set>
+		    <set name="lib">yuanshi</set>
+		    <set name="targetfield">description</set>
+		    <set name="queryfield">name</set>
+		    <set name="value"><star index="1"/></set>
+		</think>
+		<random>
+			<li><input index="1"/>: </li>
+		</random>
+	</template>
+</category> 
+
+
+<category>
+	<pattern>*院士*单位</pattern>
+	<template>
+		<think>
+			<!-- 实体类型，和数据表名、字段名一致-->
+		    <set name="type">people</set>
+		    <set name="lib">yuanshi</set>
+		    <set name="targetfield">company</set>
+		    <set name="queryfield">name</set>
+		    <set name="value"><star index="1"/></set>
+		</think>
+		<random>
+			<li><get name="value"/>院士所在单位为: </li>
+			<li><get name="value"/>院士工作单位为: </li>
+		</random>
+	</template>
+</category> 
+
+</aiml>

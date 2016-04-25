@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SqlMapper.OrganizationMapper">
+
+	<resultMap type="Organization" id="OrganizationMap">
+		<id property="id" column="id" />
+		<result property="orgname" column="orgname" />
+		<result property="logolurl" column="logolurl" />
+		<result property="description" column="description" />
+		<result property="baikeurl" column="baikeurl" />
+		<result property="superfields" column="superfields" />
+	</resultMap>
+	
+	
+	<select id="getOrganizationByName" parameterType="String"  resultMap="OrganizationMap">
+	     select  *  from   organizations where orgname=#{orgname} limit 1
+	</select>
+	
+	<select id="getAllOrgName" resultType="String">
+	     select distinct orgname
+	     from  organizations
+	</select>
+
+</mapper>

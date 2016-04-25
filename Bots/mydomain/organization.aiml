@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- Copyright (c) 2007 ALICE A.I. Foundation, Inc. -->
+<!-- Last modified Seo 21, 2009, by Lichunlei -->                                      
+
+<!--机构测试-->
+<category>
+	<pattern>*研究所</pattern>
+	<template>
+		<think>
+			<!-- 实体类型，和数据表名、字段名一致-->
+		    <set name="type">organization</set>
+		    <set name="lib">organizations</set>
+		    <set name="targetfield">description</set>
+		    <set name="queryfield">orgname</set>
+		    <set name="value"><input index="1"/></set>
+		</think>
+		<random>
+			<li><input index="1"/>: </li>
+		</random>
+	</template>
+</category> 
+
+<category>
+	<pattern>*研究院</pattern>
+	<template>
+		<think>
+		    <!-- 实体类型，和数据表名、字段名一致-->
+		    <set name="type">organization</set>
+		    <set name="lib">organizations</set>
+		    <set name="targetfield">description</set>
+		    <set name="queryfield">orgname</set>
+		    <set name="value"><input index="1"/></set>
+		</think>
+		<random>
+			<li><input index="1"/>: </li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>*学院</pattern>
+	<template>
+		<think>
+		    <!-- 实体类型，和数据表名、字段名一致-->
+		    <set name="type">organization</set>
+		    <set name="lib">organizations</set>
+		    <set name="targetfield">description</set>
+		    <set name="queryfield">orgname</set>
+		    <set name="value"><input index="1"/></set>
+		</think>
+		<random>
+			<li><input index="1"/>: </li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>*院</pattern>
+	<template>
+		<think>
+		   <!-- 实体类型，和数据表名、字段名一致-->
+		    <set name="type">organization</set>
+		    <set name="lib">organizations</set>
+		    <set name="targetfield">description</set>
+		    <set name="queryfield">orgname</set>
+		    <set name="value"><input index="1"/></set>
+		</think>
+		<random>
+			<li><input index="1"/>: </li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>*研究中心</pattern>
+	<template>
+		<think>
+		    <!-- 实体类型，和数据表名、字段名一致-->
+		    <set name="type">organization</set>
+		    <set name="lib">organizations</set>
+		    <set name="targetfield">description</set>
+		    <set name="queryfield">orgname</set>
+		    <set name="value"><input index="1"/></set>
+		</think>
+		<random>
+			<li><input index="1"/>: </li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>*大学</pattern>
+	<template>
+		<think>
+		    <!-- 实体类型，和数据表名、字段名一致-->
+		    <set name="type">organization</set>
+		    <set name="lib">organizations</set>
+		    <set name="targetfield">description</set>
+		    <set name="queryfield">orgname</set>
+		    <set name="value"><input index="1"/></set>
+		</think>
+		<random>
+			<li><input index="1"/>: </li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>*专科学校</pattern>
+	<template>
+		<think>
+		    <!-- 实体类型，和数据表名、字段名一致-->
+		    <set name="type">organization</set>
+		    <set name="lib">organizations</set>
+		    <set name="targetfield">description</set>
+		    <set name="queryfield">orgname</set>
+		    <set name="value"><input index="1"/></set>
+		</think>
+		<random>
+			<li><input index="1"/>: </li>
+		</random>
+	</template>
+</category>
+
+<!--优势学科-->
+<category>
+	<pattern>*优势学科*</pattern>
+	<template>
+		<think>
+		    <!-- 实体类型，和数据表名、字段名一致-->
+		    <set name="type">organization</set>
+		    <set name="lib">organizations</set>
+		    <set name="targetfield">superfields</set>
+		    <set name="queryfield">orgname</set>
+		    <set name="value"><star index="1"/></set>
+		</think>
+		<random>
+			<li>该学校优势学科有: </li>
+			<li>优势专业有: </li>
+		</random>
+	</template>
+</category>
+
+<!--学校所在地查询-->
+<category>
+	<pattern>*在*</pattern>
+	<template>
+		<think>
+		    <!-- 实体类型，和数据表名、字段名一致-->
+		    <set name="type">organization</set>
+		    <set name="lib">school</set>
+		    <set name="targetfield">place</set>
+		    <set name="queryfield">name</set>
+		    <set name="value"><star index="1"/></set>
+		</think>
+		<random>
+			<li><get name="value"/>在</li>
+			<li><get name="value"/>的地理位置是</li>
+			<li><get name="value"/>所在地为</li>
+			<li><get name="value"/>位于</li>
+		</random>
+	</template>
+</category> 
+
+
+</aiml>

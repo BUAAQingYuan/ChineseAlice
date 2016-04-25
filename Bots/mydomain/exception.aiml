@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- Copyright (c) 2007 ALICE A.I. Foundation, Inc. -->
+<!-- Last modified Seo 21, 2009, by Lichunlei -->                                      
+
+<!--异常情况-->
+<category>
+	<pattern>信息为空</pattern>
+	<template>
+		<random>
+			<li>抱歉，还没有收录相关信息。</li>
+			<li>这是什么，我不知道。</li>
+			<li>本宝宝很委屈，本宝宝不知道。</li>
+		</random>
+	</template>
+</category> 
+
+</aiml>
